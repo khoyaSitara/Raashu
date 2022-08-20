@@ -44,10 +44,12 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
+    buttons.buildbutton("Leech/Mirror Group 🖤", "https://t.me/ashish_leech_group")
+    buttons.buildbutton("Owner ❤", "https://t.me/ashishsharmalegend")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-Welcome | Z Mirror service is ready for you
+Welcome | Eliteflix service is ready for you
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
